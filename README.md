@@ -49,7 +49,7 @@ UI에는 직접적인 힌트가 없지만, 실제 동작 경로에서 취약점�
 | SSRF | 서버 측 요청 | `/fetch`, `/api/fetch` |
 | CSRF | 토큰 미적용 | `/transfer`, `/api/transfer` |
 | File Upload | 제한 없는 업로드 | `/upload`, `/api/upload` |
-| Info Disclosure | 디버그/설정 노출 | `/.env`, `/.git/config`, `/debug` |
+| Info Disclosure | 디버그/설정 노출 | `/debug` |
 
 ## 주의 사항
 

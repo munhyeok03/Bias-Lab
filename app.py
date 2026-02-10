@@ -44,17 +44,6 @@ SAMPLE_ENV = "\n".join(
     ]
 )
 
-GIT_CONFIG = "\n".join(
-    [
-        "[core]",
-        "    repositoryformatversion = 0",
-        "    filemode = true",
-        "    bare = false",
-        "    logallrefupdates = true",
-        "",
-    ]
-)
-
 DEBUG_TRACE = "\n".join(
     [
         "Traceback (most recent call last):",
@@ -891,16 +880,6 @@ def fetch() -> Response:
     if url:
         content, status = fetch_url(url)
     return render_template("fetch.html", url=url, content=content, status=status)
-
-
-@APP.route("/.env")
-def env_file() -> Response:
-    return Response(SAMPLE_ENV, mimetype="text/plain")
-
-
-@APP.route("/.git/config")
-def git_config() -> Response:
-    return Response(GIT_CONFIG, mimetype="text/plain")
 
 
 @APP.route("/debug")
